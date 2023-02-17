@@ -1,15 +1,18 @@
 <mat-sidenav-container fullscreen>
 
-  <mat-sidenav #start (click)="start.close()">
+  <mat-sidenav #start
+               (click)="start.close()">
 
     <mat-nav-list>
 
-      <a mat-list-item routerLink="/">
+      <a mat-list-item
+         routerLink="/">
         <mat-icon>library_books</mat-icon>
         <span>Courses</span>
       </a>
 
-      <a mat-list-item routerLink="/about">
+      <a mat-list-item
+         routerLink="/about">
         <span>About</span>
       </a>
 
@@ -28,10 +31,17 @@
   </mat-sidenav>
 
   <mat-toolbar color="primary">
-    <button mat-icon-button (click)="start.open('mouse')">
+    <button mat-icon-button
+            (click)="start.open('mouse')">
       <mat-icon>menu</mat-icon>
     </button>
   </mat-toolbar>
+
+  <!-- render spinner only if app is server side rendered -->
+  <div class="spinner-container"
+       *appShellRender>
+    <mat-spinner></mat-spinner>
+  </div>
 
 
   <router-outlet></router-outlet>
