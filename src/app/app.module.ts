@@ -33,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { AppShellRenderDirective } from './directives/app-shell-render.directive';
+import { AppShellNoRenderDirective } from './directives/app-shell-no-render.directive';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { AppShellRenderDirective } from './directives/app-shell-render.directive
     CourseDialogComponent,
     AboutComponent,
     AppShellRenderDirective,
+    AppShellNoRenderDirective,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

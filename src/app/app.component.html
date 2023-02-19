@@ -37,14 +37,12 @@
     </button>
   </mat-toolbar>
 
+  <router-outlet></router-outlet>
+
   <!-- render spinner only if app is server side rendered -->
   <div class="spinner-container"
        *appShellRender>
     <mat-spinner></mat-spinner>
   </div>
-
-
-  <router-outlet></router-outlet>
-
 
 </mat-sidenav-container>
