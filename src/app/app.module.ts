@@ -1,6 +1,6 @@
 import {
   BrowserModule,
-  BrowserTransferStateModule,
+  // BrowserTransferStateModule,
 } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -48,6 +48,7 @@ import { AppShellNoRenderDirective } from './directives/app-shell-no-render.dire
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    // BrowserTransferStateModule, no more needed
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
